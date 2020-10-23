@@ -2,19 +2,31 @@
 #  
 # A note on style: Dictionaries can be defined before or after functions.
 
-board = {'TL',' ', 'TM',' ', 'TR',' ', 'ML',' ', 'MM',' ', 'MR',' ', 'BL',' ', 'BM',' ', 'BR',' '}
+board = {'TL':' ', 'TM':' ', 'TR':' ', 'ML':' ', 'MM':' ', 'MR':' ', 'BL':' ', 'BM':' ', 'BR':' '}
 
 def tictactoe(board):
-    print((board['TL']) + "|" + (board['TM']) + "|" + (board['TL']))
+    print((board['TL']) + "|" + (board['TM']) + "|" + (board['TR']))
     print("-+-+-")
-    print((board['ML']) + "|" + (board['MM']) + "|" + (board['ML']))
+    print((board['ML']) + "|" + (board['MM']) + "|" + (board['MR']))
     print("-+-+-")
     print((board['BL']) + "|" + (board['BM']) + "|" + (board['BR']))
+
+def winner(board):
+    if board['TL'] == board['TM'] == board['TR']:
+        if board['TL'] == 'X':
+            print("Player One Wins")
+        if board['TL'] == 'O':
+            print("Player Two Wins")
+
+def playeroneturn(board):
+
+def playertwoturn(board):
 
 tictactoe(board)
 options = ['TL', 'TM', 'TR', 'ML', 'MM', 'MR', 'BL', 'BM', 'BR']
 
-a = str(input(print("Player One, where would you like to place your first X? Your options are " + options + " : ")))
+print("Player One, where would you like to place your first X? Your options are " , options , " : ")
+a = input()
 if a == 'TL':
     board.update({'TL':'X'})
 if a == 'TM':
@@ -38,7 +50,8 @@ options.remove(a)
 
 tictactoe(board)
 
-a = str(input(print("Player Two, where would you like to place your first O? Your options are " + options + " : ")))
+print("Player Two, where would you like to place your first O? Your options are " , options , " : ")
+a = input()
 if a == 'TL':
     board.update({'TL':'O'})
 if a == 'TM':
@@ -62,7 +75,8 @@ options.remove(a)
 
 tictactoe(board)
 
-a = str(input(print("Player One, where would you like to place your next X? Your options are " + options + " : ")))
+print("Player One, where would you like to place your next X? Your options are " , options , " : ")
+a = input()
 if a == 'TL':
     board.update({'TL':'X'})
 if a == 'TM':
@@ -86,7 +100,8 @@ options.remove(a)
 
 tictactoe(board)
 
-a = str(input(print("Player Two, where would you like to place your next O? Your options are " + options + " : ")))
+print("Player Two, where would you like to place your next O? Your options are " , options , " : ")
+a = input()
 if a == 'TL':
     board.update({'TL':'O'})
 if a == 'TM':
@@ -110,7 +125,8 @@ options.remove(a)
 
 tictactoe(board)
 
-a = str(input(print("Player One, where would you like to place your next X? Your options are " + options + " : ")))
+print("Player One, where would you like to place your next X? Your options are " , options , " : ")
+a = input()
 if a == 'TL':
     board.update({'TL':'X'})
 if a == 'TM':
@@ -134,7 +150,10 @@ options.remove(a)
 
 tictactoe(board)
 
-a = str(input(print("Player Two, where would you like to place your next O? Your options are " + options + " : ")))
+winner(board)
+
+print("Player Two, where would you like to place your next O? Your options are " , options , " : ")
+a = input()
 if a == 'TL':
     board.update({'TL':'O'})
 if a == 'TM':
@@ -158,7 +177,8 @@ options.remove(a)
 
 tictactoe(board)
 
-a = str(input(print("Player One, where would you like to place your next X? Your options are " + options + " : ")))
+print("Player One, where would you like to place your next X? Your options are " , options , " : ")
+a = input()
 if a == 'TL':
     board.update({'TL':'X'})
 if a == 'TM':
@@ -182,7 +202,8 @@ options.remove(a)
 
 tictactoe(board)
 
-a = str(input(print("Player Two, where would you like to place your next O? Your options are " + options + " : ")))
+print("Player Two, where would you like to place your next O? Your options are " , options , " : ")
+a = input()
 if a == 'TL':
     board.update({'TL':'O'})
 if a == 'TM':
@@ -206,7 +227,8 @@ options.remove(a)
 
 tictactoe(board)
 
-a = str(input(print("Player One, where would you like to place your next X? Your options are " + options + " : ")))
+print("Player One, where would you like to place your next X? Your options are " , options , " : ")
+a = input()
 if a == 'TL':
     board.update({'TL':'X'})
 if a == 'TM':
