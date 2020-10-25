@@ -4,6 +4,7 @@
 
 board = {'TL':' ', 'TM':' ', 'TR':' ', 'ML':' ', 'MM':' ', 'MR':' ', 'BL':' ', 'BM':' ', 'BR':' '}
 options = ['TL', 'TM', 'TR', 'ML', 'MM', 'MR', 'BL', 'BM', 'BR']
+x = 0
 
 def tictactoe(board):
     print((board['TL']) + "|" + (board['TM']) + "|" + (board['TR']))
@@ -12,9 +13,7 @@ def tictactoe(board):
     print("-+-+-")
     print((board['BL']) + "|" + (board['BM']) + "|" + (board['BR']))
 
-x = 0
-
-def winner(board):
+def winner(board, x):
     if board['TL'] == board['TM'] == board['TR']:
         if board['TL'] == 'X':
             print("Player One Wins")
@@ -22,7 +21,7 @@ def winner(board):
         elif board['TL'] == 'O':
             print("Player Two Wins")
             x = x + 1
-    return x
+        return x
     if board['ML'] == board['MM'] == board['MR']:
         if board['ML'] == 'X':
             print("Player One Wins")
@@ -120,13 +119,19 @@ while x < 1:
     playeroneturn(board, options)
     playertwoturn(board, options)
     playeroneturn(board, options)
-    winner(board)
+    winner(board,x) #why not ending while loop because x = 1?
     playertwoturn(board, options)
-    winner(board)
+    winner(board,x)
     playeroneturn(board, options)
-    winner(board)
+    winner(board,x)
     playertwoturn(board, options)
-    winner(board)
+    winner(board,x)
     playeroneturn(board, options)
+    print("No one won this game")
+    break
+
+
+
+
 
 
