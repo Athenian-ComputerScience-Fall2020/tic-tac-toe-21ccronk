@@ -1,5 +1,6 @@
 # Collaborators (including web sites where you got help: (enter none if you didn't need help)
-#  
+#  Megan
+#  I asked Ryan a question at one point
 # A note on style: Dictionaries can be defined before or after functions.
 
 board = {'TL':' ', 'TM':' ', 'TR':' ', 'ML':' ', 'MM':' ', 'MR':' ', 'BL':' ', 'BM':' ', 'BR':' '}
@@ -141,43 +142,43 @@ tictactoe(board)
 while x < 1:
     y = playeroneturn(board, options)
     while y == False:
-        playeroneturn(board,options)
+        y = playeroneturn(board,options)
     y = playertwoturn(board, options)
     while y == False:
-        playertwoturn(board,options)
+        y = playertwoturn(board,options)
     y = playeroneturn(board, options)
     while y == False:
-        playeroneturn(board,options)
+        y = playeroneturn(board,options)
     y = playertwoturn(board, options)
     while y == False:
-        playertwoturn(board,options)
+        y = playertwoturn(board,options)
     y = playeroneturn(board, options)
     while y == False:
-        playeroneturn(board,options)
+        y = playeroneturn(board,options)
     x = winner(board,x) 
     if x > 0:
         break
     y = playertwoturn(board, options)
     while y == False:
-        playertwoturn(board,options)
+        y = playertwoturn(board,options)
     x = winner(board,x)
     if x > 0:
         break
     y = playeroneturn(board, options)
     while y == False:
-        playeroneturn(board,options)
+        y = playeroneturn(board,options)
     x = winner(board,x)
     if x > 0:
         break
     y = playertwoturn(board, options)
     while y == False:
-        playertwoturn(board,options)
+        y = playertwoturn(board,options)
     x = winner(board,x)
     if x > 0:
         break
     y = playeroneturn(board, options)
     while y == False:
-        playeroneturn(board,options)
+        y = playeroneturn(board,options)
     x = winner(board,x)
     if x > 0:
         break
