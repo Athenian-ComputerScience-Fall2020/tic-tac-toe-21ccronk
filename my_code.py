@@ -14,6 +14,7 @@ def tictactoe(board):
     print("-+-+-")
     print((board['BL']) + "|" + (board['BM']) + "|" + (board['BR']))
 
+
 def winner(board, x):
     if board['TL'] == board['TM'] == board['TR']:
         if board['TL'] == 'X':
