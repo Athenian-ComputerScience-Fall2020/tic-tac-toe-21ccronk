@@ -7,6 +7,7 @@ board = {'TL':' ', 'TM':' ', 'TR':' ', 'ML':' ', 'MM':' ', 'MR':' ', 'BL':' ', '
 options = ['TL', 'TM', 'TR', 'ML', 'MM', 'MR', 'BL', 'BM', 'BR']
 x = 0
 
+
 def tictactoe(board):
     print((board['TL']) + "|" + (board['TM']) + "|" + (board['TR']))
     print("-+-+-")
